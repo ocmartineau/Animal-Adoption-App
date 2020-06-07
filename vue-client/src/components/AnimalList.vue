@@ -14,9 +14,13 @@ export default {
   },
   methods: {
 
-    async getAllAnimals() {
-      const response = await axios.get('http://localhost:8000/animals');
-      this.animals = response.data
+    getAllAnimals() {
+      axios.get('http://localhost:8000/animals')
+      .then(function(response){
+        console.log(response);
+        this.animals = response.data;
+      })
+      
     }
   },
   mounted() {
