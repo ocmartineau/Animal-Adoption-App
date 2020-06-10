@@ -14,10 +14,12 @@
 <script>
 import Header from './Header';
 import Footer from './Footer';
+import AnimalList from '../components/AnimalList'
 
 export default {
   components: { 
-    Header, 
+    Header,
+    AnimalList, 
     Footer
   }
 };
