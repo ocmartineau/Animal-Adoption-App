@@ -11,7 +11,7 @@ app.use(cors());
 app.use(express.urlencoded({extended: true}));
 
 //setting the port
-const port = 8000;
+const port = 8008;
 
 //listen to the port
 app.listen(port)

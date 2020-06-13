@@ -1,7 +1,8 @@
 <template>
     <div>
     <div class="page-header">
-      <h2 class="title">Animals available for adoption</h2>     </div>
+      <h2 class="title">Animals available for adoption</h2>    
+    </div>
     <div class="content columns is-multiline">
       <div v-for="animal in animals" v-bind:key="animal.id" class="column is-one-quarter">
         <div class="card">
@@ -37,8 +38,8 @@ export default {
   methods: {
 
     getAllAnimals() {
-      axios.get('http://localhost:8000/animals')
-      .then(function(response){
+      axios.get('http://localhost:8008/animals')
+      .then( (response) => {
         console.log(response);
         this.animals = response.data;
       })
